@@ -90,6 +90,7 @@ body{
     align-items: left;
     flex-direction: column;
     padding-top: 30px;
+    border-bottom: 1px solid var(--text-color-input);
 }
 
 .footer{
@@ -130,9 +131,15 @@ body{
     border-color: var(--text-color-invalid);
 }
 
+.form-input::-moz-placeholder{
+    color: var(--text-color-input);
+}
+
 .form-input::placeholder{
     color: var(--text-color-input);
 }
+
+
 
 .hint{
     display: flex;
