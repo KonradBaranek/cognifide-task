@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg-header: #0094BB;
+    --color-bg-main: #F9F9F9;
+    --color-bg-footer: #E5E5E5;
+
+    --form-padding: 45px;
+    --text-color-input: #ACACAC;
+    --text-color-labels: #7D7D7D;
+    --text-color-invalid: #CC0848;
+    
+    --max--width: 625px;
+    --header-height: 89px;
+    --footer-height: 100px;
+
+    --user-image-size: 120px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: var(--text-color-labels);
+    font-size: 14px;
+    letter-spacing: 0;
+    margin: 0;
+
+}
+
+
+.wrapper{
+    background: url("../assets/background.png") no-repeat fixed center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    
+
+}
+
+.form{
+    width: 100%;
+    max-width: var(--max--width);
+
+    -webkit-box-shadow: 7px 7px 14px -3px rgba(0,0,0,1);
+    -moz-box-shadow: 7px 7px 14px -3px rgba(0,0,0,1);
+    box-shadow: 7px 7px 14px -3px rgba(0,0,0,0.4);
+
+}
+
+.header{
+    background: var(--color-bg-header);
+    height: var(--header-height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header > p{
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.user-image-container{
+    position: absolute;
+    height: var(--user-image-size);
+    width: var(--user-image-size);
+    top: -13px;
+    left: 47px;
+    border: 2px solid var(--color-bg-header);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main{
+    background: var(--color-bg-main);
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.footer{
+    background: var(--color-bg-footer);
+    height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.footer-reset{
+    justify-content: space-between;
+}
+
+.form-field{
+    margin: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-bottom: 32px;
+    width: 100%;
+    position: relative;
+}
+
+
+.form-input{
+    color: var(--text-color-input);
+    width: 100%;
+    height: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    z-index: 0;
+}
+
+.form-input:invalid{
+    border-color: var(--text-color-invalid);
+}
+
+.form-input::placeholder{
+    color: var(--text-color-input);
+}
+
+.hint{
+    display: flex;
+    position: absolute;
+    top:-22px;
+    right: -2px;
+    padding-left: 10px; 
+    width: 30px;
+    height: 60px;
+    transform: rotate(-49.93deg);
+    background: var(--color-bg-header);
+    color: white;
+    text-align: right;
+    align-items: center;
+}
+
+.hint p{
+    position: absolute;
+    transform: rotate(49.93deg);
+    top: 10%;
+    left: 5px;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.input-wrapper{
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    position: relative;   
+    overflow: hidden;
+    
+}
+
+.input-shadow{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--text-color-input);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.45);
+    -moz-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.45);
+    box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.45);
+    pointer-events: none;
+}
+
+.form-label{
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.form-checkbox + .form-label{
+    display: inline;
+}
+
+.form-checkbox{
+    visibility: hidden;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border: 1px solid var(--text-color-input);
+    background: var(--color-bg-footer);
+    box-shadow: none;
+}
+
+.forgotten-password{
+    color: var(--color-bg-header);
+    padding: 0 14px;
+    text-decoration: none;
+}
+
+.submit-button{
+    height: 50px;
+    display: inline;
+    min-width: 109px;
+    padding: 10px;
+    margin-right: 49px;
+    border: 1px solid  var(--text-color-input);
+    border-radius: 4px;
+    background: white;
+    text-transform: uppercase;
+    color: var(--text-color-input) ;
+    font-weight: bold;
+}
+
+.submit-button:hover{
+    background: var(--color-bg-header);
+    color: white;
+}
+
+.cancel-button{
+    border-color: var(--text-color-invalid);
+    color: var(--text-color-invalid);
+    margin: 0;
+    margin-left: 45px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cancel-button:hover{
+    background: var(--text-color-invalid);
+    color: white;
+}
+
+.user-image{
+    width: 150%;
+    left: -20%;
+    top: -18%;
+   position: absolute;
+}
+
+.reset-message{
+    white-space: pre-line;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-left: 45px;
+}
+
+.tooltip{
+    position: absolute;
+    background: var(--color-bg-header);
+    border-radius: 4px;
+    top:-5px;
+    right: 20px;
+    color: white;
+    padding: 5px 10px;
+    z-index: 2;
+}
+.tooltip::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--color-bg-header);
+    top: calc(100% - 4px);
+    left: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.form-checkbox ~ .form-label div{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--text-color-input);
+    background: white;
+    border-radius: 4px;
+    position: relative;
+    top: 5px;
+}
+
+.form-checkbox:checked ~ .form-label div::after{
+    content: url("../assets/checked.svg");
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: -5px;
+    left: -7px;
+}
+
+.invalid-right{
+    color: var(--text-color-invalid);
+    margin: 0;
+    text-align: right;
+}
+
+.invalid{
+    color: var(--text-color-invalid);
+}
+
+.invalid-border{
+    border-color: var(--text-color-invalid);
+}
+
+.hidden{
+    display: none;
+}
+
+@media only screen and (max-width: 550px) {
+    .reset-image {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .cancel-button{
+        margin-left: 10px; 
+    }
+
+    .submit-button{
+        margin-right: 10px;
+    }
+}
+  
+  

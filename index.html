@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Cognifide Task</title>
+</head>
+<body>
+    <div class="wrapper" >
+       <form class="form" id="normal" novalidate>
+            <header class="header">
+                <div class="user-image-container">
+                    <img class="user-image"  src="assets/user-img.png" alt="user image">
+                </div>
+            </header>
+            <main class="main">
+                <div class="form-field">
+                    <label id="email-label" class="form-label" for="email">email adress</label>
+                    <div class="input-wrapper"> 
+                        <input class="form-input" type="email" name="email" placeholder="Enter your email adress" id="email">
+                        <div class="hint "><p>*</p></div>
+                        <div class="input-shadow" id="email-shadow"></div>
+                    </div>
+                    <div class='tooltip hidden'>required</div>
+                    <p class="invalid-right hidden" id="invalid-message">Invalid email address</p>
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label"    for="password">Password</label>
+                    <div class="input-wrapper"> 
+                        <input class="form-input" type="password" name="password" placeholder="Enter your password" id="password">
+                        <div class="hint "><p>*</p></div>
+                        <div class="input-shadow"></div>
+                    </div>
+                    <div class='tooltip hidden'>required
+                        <div class="tooltip-triangle"></div>
+                    </div>
+                </div>
+                
+                <div class="form-field">
+                    <input class="form-checkbox" type="checkbox" name="remember" id="remember">
+                    <label class="form-label" for="remember"> <div></div> remember me</label>
+                </div>
+            </main>
+            <footer class="footer">
+                <a  class="forgotten-password" href="#" id="forgotten">Forgotten password?</a>
+                <input class="submit-button" type="submit" value="login">
+            </footer>
+        </form>
+
+        <form class="form" id="reset" novalidate>
+             <header class="header">
+                 <div class="user-image-container reset-image">
+                     <img class="user-image"  src="assets/user-img.png" alt="user image">
+                 </div>
+                 <p>reset password</p>
+             </header>
+             <main class="main">
+                 <p class="reset-message">Hey, it happens to everyone.
+                     Just let us know what email address you use to login
+                     and we'll send you an email with instructions.
+                 </p>
+                 <div class="form-field">
+                     <label class="form-label" for="email" id="email-reset-label">email adress</label>
+                     <div class="input-wrapper"> 
+                         <input class="form-input" type="email" name="email" placeholder="Enter your email adress" id="email-reset">
+                         <div class="hint "><p>*</p></div>
+                         <div class="input-shadow" id="email-reset-shadow"></div>
+                     </div>
+                     <div class='tooltip  hidden'>required
+                    </div>
+                     <p class="invalid-right hidden" id="reset-invalid-message">Invalid email address</p>
+                 </div>
+             </main>
+             <footer class="footer footer-reset">
+                <input class="submit-button cancel-button" type="submit" value="cancel" id="cancel">
+                <input class="submit-button" type="submit" value="reset password" id="">
+             </footer>
+         </form>
+         </div>
+    <script src="script/script.js" async></script>
+</body>
+</html>
